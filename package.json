@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.12.0-beta.3"
@@ -8,5 +9,22 @@
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.5.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaileyThomas/tech-blog.git"
+  },
+  "author": "Hailey Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaileyThomas/tech-blog/issues"
+  },
+  "homepage": "https://github.com/HaileyThomas/tech-blog#readme",
+  "description": ""
 }
