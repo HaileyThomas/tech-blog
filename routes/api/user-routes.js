@@ -48,6 +48,21 @@ router.post('/', (req, res) => {
     });
 });
 
+// verify user at login
+router.post('/login', (req, res) => {
+  User.findOne({
+    where: {
+      email: req.body.email,
+    },
+  }).then((dbUserData) => {
+    if (!dbUserData) {
+      res.status(400).json({ message: 'No user with that email address!' });
+      return;
+    }
+    res.json({ user: dbUserData });
+  });
+});
+
 // update a user
 router.put('/:id', (req, res) => {
   User.update(req.body, {
