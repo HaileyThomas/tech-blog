@@ -12,14 +12,45 @@
 </head>
 <body>
     <div class="wrapper">
+        <!-- NAVIGATION -->
         <header>
-
+            <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <h1 class="is-size-4">Tech Blog</h1>
+                    </a>
+                </div>
+                <div class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item">
+                            Home
+                        </a>
+                        <a class="navbar-item">
+                            Dashboard
+                        </a>
+                    </div>
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>Log in</strong>
+                            </a>
+                            <a class="button is-primary">
+                                <strong>Log out</strong>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>    
+            </nav>
         </header>
-        <main>
+        <!-- MAIN BODY -->
+        <main class="block m-3">
             {{{ body }}}
         </main>
-        <footer>
-            
+        <!-- FOOTER -->
+        <footer class="footer">
+            &copy; Hailey Thomas | <a href="" target="blank">View on GitHub</a>
         </footer>
     </div>
 </body>
