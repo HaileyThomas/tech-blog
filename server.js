@@ -2,12 +2,19 @@ const express = require('express');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
 const path = require('path');
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// express middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// handlebars
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 // connect public files
 app.use(express.static(path.join(__dirname, 'public')));
