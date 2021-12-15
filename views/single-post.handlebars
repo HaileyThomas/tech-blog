@@ -11,7 +11,32 @@
         <br>
         <p class="has-text-right">Created by <strong>{{post.user.username}}</strong></p>
     </div>
-    <div class="card-footer">
-        <a href="/post/{{id}}" class="card-footer-item">{{post.comments.length}} comment(s)</a>
+</article>
+<article class="card m-4">
+    <div class="card-header has-background-primary">
+        <p class="card-header-title has-text-light is-size-5">
+            Add a Comment:
+        </p>
+    </div>
+    <div class="card-content">
+        <form id="comment-form">
+            <div class="field">
+                <textarea class="textarea" name="comment-body"></textarea>
+            </div>
+            <div class="field">
+                <button class="button is-primary" type="submit">Add Comment</button>
+            </div>
+        </form>
     </div>
 </article>
+<div class="comments">
+    {{#each post.comments}}
+    <article class="card m-4">
+        <div class="card-content">
+            <p class="has-text-left"><b>{{user.username}}</b> on <i>{{created_at}}</i></p>
+            <br>
+            <p class="has-text-justified is-size-5">{{comment_text}}</p>
+        </div>
+    </article>
+    {{/each}}
+</div>
