@@ -25,19 +25,24 @@
                         <a class="navbar-item is-size-5">
                             Home
                         </a>
+                        {{#if loggedIn}}
                         <a class="navbar-item is-size-5">
                             Dashboard
                         </a>
+                        {{/if}}
                     </div>
                     <div class="navbar-end">
                         <div class="navbar-item">
                         <div class="buttons">
-                            <a id="login" class="button is-primary is-size-5" href="/login">
-                                <strong>Log in</strong>
-                            </a>
+                            {{#if loggedIn}}
                             <a id="logout" class="button is-primary is-size-5" href="/">
                                 <strong>Log out</strong>
                             </a>
+                            {{else}}
+                            <a id="login" class="button is-primary is-size-5" href="/login">
+                                <strong>Log in</strong>
+                            </a>
+                            {{/if}}
                         </div>
                         </div>
                     </div>
@@ -53,7 +58,9 @@
             &copy; Hailey Thomas | <a href="" target="blank">View on GitHub</a>
         </footer>
     </div>
+    {{#if loggedIn}}
     <!-- connect to javascript -->
     <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 </html>
