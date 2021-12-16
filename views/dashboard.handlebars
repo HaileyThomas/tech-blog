@@ -1,5 +1,6 @@
 <section class="columns is-justify-content-center">
-    <div class="column is-three-fifths">
+    <div class="column">
+        <!-- CREATE NEW POST -->
         <div class="card m-3">
             <div class="card-header has-background-primary">
                 <p class="has-text-white is-size-5 p-3"><b>Create New Post</b></p>
@@ -12,8 +13,8 @@
                     </div>
                     <div class="field">
                         <div class="control">
-                        <label class="label" for="post-content">Post:</label>
-                        <textarea class="textarea" name="post-content"></textarea>
+                            <label class="label" for="post-content">Post:</label>
+                            <textarea class="textarea" name="post-content"></textarea>
                         </div>
                     </div>
                         <button class="button is-primary is-fullwidth" type="submit">Create</button>
@@ -21,5 +22,19 @@
                 </form>
             </div>
         </div>
+        <!-- USERS COMMENTS -->
+        {{#if posts.length}}
+        <section class="m-3">
+            <ol>
+                {{#each posts as |post|}}
+                <li>
+                    {{> post-info post}}
+                    <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+                </li>
+                {{/each}}
+            </ol>
+        </section>
+        {{/if}}
     </div>
 </section>
+<script src="/javascript/add-post.js"></script>
