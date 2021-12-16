@@ -12,6 +12,7 @@
         <p class="has-text-right">Created by <strong>{{post.user.username}}</strong></p>
     </div>
 </article>
+{{#if loggedIn}}
 <article class="card m-4">
     <div class="card-header has-background-primary">
         <p class="card-header-title has-text-light is-size-5">
@@ -29,6 +30,7 @@
         </form>
     </div>
 </article>
+{{/if}}
 <div class="comments">
     {{#each post.comments}}
     <article class="card m-4">
