@@ -18,17 +18,7 @@
     </div>
 </article>
 {{/if}}
-<div class="comments">
-    {{#each post.comments}}
-    <article class="card m-4">
-        <div class="card-content">
-            <p class="has-text-left"><b>{{user.username}}</b> on <i>{{created_at}}</i></p>
-            <br>
-            <p class="has-text-justified is-size-5">{{comment_text}}</p>
-        </div>
-    </article>
-    {{/each}}
-</div>
+{{> comments post.comments}}
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 {{/if}}
