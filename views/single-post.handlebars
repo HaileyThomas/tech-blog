@@ -1,17 +1,4 @@
-<article class="card m-4">
-    <div class="card-header has-background-primary">
-        <p class="card-header-title has-text-light is-size-5">
-            {{post.title}}
-        </p>
-    </div>
-    <div class="card-content">
-        <p class="has-text-left is-italic">{{post.created_at}}</p>
-        <br>
-        <p class="has-text-justified is-size-5">{{post.post_content}}</p>
-        <br>
-        <p class="has-text-right">Created by <strong>{{post.user.username}}</strong></p>
-    </div>
-</article>
+{{> post-info post }}
 {{#if loggedIn}}
 <article class="card m-4">
     <div class="card-header has-background-primary">
