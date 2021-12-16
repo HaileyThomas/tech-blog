@@ -12,6 +12,6 @@
         <p class="has-text-right">Created by <strong>{{user.username}}</strong></p>
     </div>
     <div class="card-footer">
-        <a href="/post/{{id}}" class="card-footer-item">{{comments.length}} comment(s)</a>
+        <a href="/post/{{id}}" class="card-footer-item">{{comments.length}} {{format_plural "comment" comments.length}}</a>
     </div>
 </article>
