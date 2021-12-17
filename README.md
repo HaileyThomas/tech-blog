@@ -18,13 +18,17 @@ Load the web application in your browser and you will be presented with a Techno
 ### Screenshot
 
 - ![Screenshot1](./public/assets/screenshot1.png)
+
 - ![Screenshot2](./public/assets/screenshot2.png)
+
 - ![Screenshot3](./public/assets/screenshot3.png)
+
 - ![Screenshot4](./public/assets/screenshot4.png)
 
 ### Links
 
-* [DeployedLink](https://haileythomas.github.io/tech-blog/) - link to deployed website
+* [Heroku](https://shrouded-anchorage-40186.herokuapp.com/) - link to deployed web application
+* [GitHubPages](https://haileythomas.github.io/tech-blog/) - link to GitHub pages
 * [GitHub](https://github.com/HaileyThomas/tech-blog) - link to GitHub project repository
 
 ## Credits
